@@ -1,0 +1,101 @@
+
+26/04/2024
+
+Mysql- Mysqlclient.pymtsql
+Postgres-psycopg2
+Sqllite-sqllite3
+mongodb-pymongo
+Oracle-cx_oracle
+
+# download and install Mysql
+
+step 1:
+# connecting to the mysql server..
+
+mysql -u username -p password
+
+mysql -u -p password
+
+enter password: password(Swati@123)
+
+step2:
+listing the database
+
+show databse;
+
+step3:
+creating the database..
+
+create database database-name;
+
+create database python_8am;
+
+step4:select the database;
+user databse - name
+use python_8am
+
+step 5:
+creating the table inside the database..
+
+create table table-name(column1 datatype,column2 datatype.......)
+
+create table player_info(p_name varchar(30),p_team varchar(4),p_age integer,p_price varchar(6));
+
+step 6:
+listing the tables in the particular database
+
+show tables;
+
+step 7:
+descripton of the table;
+desc table-name;
+desc player_info;
+
+step 8:
+
+inserting the data into that table...
+
+insert into table-name(column1,column2...) values(value1,value2.......);
+
+insert into player_info(p_name varchar(30),p_age integer(10),p_price integer(20),p_team varchar(30))  values('kohli',36,'15 CR','RCB');
+
+insert into player_info(p_name,p_age,p_price,p_team)  values('Rohith',36,'16 CR','MI'),('Rahul',34,'17 cr','KKR'),('Dhoni',38,'15 cr','CSK');
+
+step 9 :
+retrieving the data from the table..
+select* from table-name;
+select *from player_info;     -return all the fields...
+
+select p_name ,p_team from player_info;   -return only name and them fields..
+
+select*from  player_info where p_name='Dhoni';
+
+step 10: updating the record in the table...
+
+update player_info SET p_age = 35 where p_name="kohli";
+
+update player_info SET p_age=35, p_name="RCB" where p_name="Rahul";
+
+
+#step 11: Deleting the data from the table..
+
+delete from name where condition;
+  delete from player_info where p_name="Rahul";
+
+# steo 12:adding the new column to the table..
+
+alter table table_name add column-name datatype;
+
+alter table player_info add p_role varchar(15) NOT NULL DEFAULT 'ALLrounder';
+
+#  step13: deleting all the records and making it as empty..
+
+truncate table_name;
+
+drop table table_name...
+
+drop database database-name;
+
+
+create a table team_members details
+create database 22 jan;
